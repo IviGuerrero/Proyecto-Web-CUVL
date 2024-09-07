@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Financial Data
+{% endblock %}
+
+{% block content %}
+  <h1>Datos Financieros</h1>
+  <p>Información combinada de Balanz e Investing Pro.</p>
+
+  <h2>Balanz</h2>
+  <p>Nombre: {{ balanz.name }}</p>
+  <p>Precio: {{ balanz.price }}</p>
+  <p>Cambio: {{ balanz.change }}</p>
+
+  <h2>Investing Pro</h2>
+  <p>Nombre: {{ investing.name }}</p>
+  <p>Precio: {{ investing.price }}</p>
+  <p>Cambio: {{ investing.change }}</p>
+{% endblock %}
