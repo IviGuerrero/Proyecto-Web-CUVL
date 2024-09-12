@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Search{% endblock %}
+
+{% block content %}
+<h1>Search Results</h1>
+<ul>
+    {% if results %}
+        {% for symbol, name in results.items() %}
+            <li>{{ symbol }}: {{ name }}</li>
+        {% endfor %}
+    {% else %}
+        <li>No results found for "{{ cedears }}"</li>
+    {% endif %}
+</ul>
+{% endblock %}
