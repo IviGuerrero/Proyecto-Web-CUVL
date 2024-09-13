@@ -1,4 +1,4 @@
-import os
+deimport os
 from flask import Flask, render_template,request
 app= Flask (__name__,template_folder=os.path.join(os.path.dirname(__file__),'templates'))
 
@@ -67,5 +67,5 @@ def test_search():
         print(f"Results: {results}")
 
 if __name__ == '__main__':
-    test_saerch()
+    test_search()
     app.run(debug=True)
