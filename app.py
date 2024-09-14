@@ -4,6 +4,7 @@ app= Flask (__name__,template_folder=os.path.join(os.path.dirname(__file__),'tem
 
 @app.route ('/')
 def home():
+     print (f"Template folder: {app.template_folder}")
     return render_template ('home.html')
 
 @app.route ('/about')
