@@ -18,13 +18,13 @@ def index():
 @app.route('/financial-data')
 def financial_data():
     balanz_data = {
-        'name': 'Acción XYZ',
+        'name': 'XYZ',
         'price': 100.25,
         'change': '+1.25%'
     }
     
     investing_pro_data = {
-        'name': 'Índice ABC',
+        'name': 'ABC',
         'price': 2500.75,
         'change': '-0.50%'
     }
