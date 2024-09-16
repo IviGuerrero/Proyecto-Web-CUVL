@@ -1,13 +1,46 @@
 {% extends "base.html" %}
 
-{% block content%}
+{% block title%} Cedears{% endblock %}
 
-<div class="jumbotron">
-    <h1 class="display-4"> Simbolos de Cedears:</h1>
-    <p class="lead">'AAPL':'Apple Inc'.
-    <p class="lead">'TSLA':'Tesla Motors'
-    <p class="lead">'XYZ':'Acción XYZ'
-    <p class="lead">'ABC':'Índice ABC'. </p>
-    <hr class="my-4">
+{% block content%}
+<div class="container">
+    <h1 class="mb-4"> Precios de Cedears: </h1>
+    <table class="table table-bordered" id="spreadsheet">
+        <thead>
+            <tr>
+                <th>Cedears :</th>
+                <th>Precio Esperado :</th>
+                <th>Precio Actual :</th>
+            </tr>
+        </thead>
+         <tbody>
+            <tr>
+                <td><input type= "text"class ="form-control" value="AAPL"></td>
+                <td><input type="text" class="form-control" value="0"></td>
+                <td><input type="text" class="form-control" value="0"></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="form-control" value="ABC"></td>
+                <td><input type="text" class="form-control" value="0"></td>
+                <td><input type="text" class="form-control" value="0"></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="form-control" value="TSLA"></td>
+                <td><input type="text" class="form-control" value="0"></td>
+                <td><input type="text" class="form-control" value="0"></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="form-control" value="XYZ"></td>
+                <td><input type="text" class="form-control" value="0"></td>
+                <td><input type="text" class="form-control" value="0"></td>
+            </tr>     
+         </tbody>
+    </table>
 </div>
+<style>
+    #spreadsheet tr {
+        color: white;
+    }
+</style>
+
 {% endblock %}
