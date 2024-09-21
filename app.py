@@ -7,13 +7,13 @@ def home():
      print (f"Template folder: {app.template_folder}")
     return render_template ('home.html')
 
-@app.route ('/about')
-def about():
-    return render_template('about_investing.html')
+@app.route ('/investing')
+def investing():
+    return render_template('investing.html')
 
-@app.route('/index')
-def index():
-    return render_template('index_balanz.html')
+@app.route('/balanz')
+def balanz():
+    return render_template('balanz.html')
 
 @app.route('/financial-data')
 def financial_data():
