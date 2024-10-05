@@ -4,7 +4,7 @@ app= Flask (__name__,template_folder=os.path.join(os.path.dirname(__file__),'tem
 
 @app.route ('/')
 def home():
-     print (f"Template folder: {app.template_folder}")
+    print (f"Template folder: {app.template_folder}")
     return render_template ('home.html')
 
 @app.route ('/investing')
@@ -17,7 +17,7 @@ def balanz():
 
 @app.route('/iol')
 def iol():
-     return render_template('iol.html')
+    return render_template('iol.html')
 
 @app.route('/financial-data')
 def financial_data():
@@ -26,7 +26,7 @@ def financial_data():
         'price': 100.25,
         'change': '+1.25%'
     }
-    
+   
     investing_pro_data = {
         'name': 'ABC',
         'price': 2500.75,
@@ -71,6 +71,9 @@ def test_search():
         results = search_investments(cedears)
         print(f"Results: {results}")
 
+@app.route('/logo')
+def logo():
+    return render_template ('logo.html')
+
 if __name__ == '__main__':
-    test_search()
     app.run(debug=True)
