@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif; 
+  color: #fff
+}
+
+.jumbotron{
+    margin: 50px auto;
+    padding: 20px 100px;
+    text-align: left;
+}
+
+.search-results{
+    margin-top: 50px;
+}
+
+.container, h1{
+    margin-top: 50px;
+}
+
+#financial-data-container{
+    margin-top: 80px;
+    padding-left: 80px;
+}
