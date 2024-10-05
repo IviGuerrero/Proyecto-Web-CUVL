@@ -15,6 +15,10 @@ def investing():
 def balanz():
     return render_template('balanz.html')
 
+@app.route('/iol')
+def iol():
+     return render_template('iol.html')
+
 @app.route('/financial-data')
 def financial_data():
     balanz_data = {
