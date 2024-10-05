@@ -1,4 +1,4 @@
-deimport os
+import os
 from flask import Flask, render_template,request
 app= Flask (__name__,template_folder=os.path.join(os.path.dirname(__file__),'templates'))
 
