@@ -1,3 +1,13 @@
+footer h5{
+    text-decoration: underline;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+footer h5:hover{
+    color: #ff6347;
+}
+
 .social-icons a {
     margin-right: 40px;
 }
