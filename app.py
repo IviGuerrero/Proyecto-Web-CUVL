@@ -75,5 +75,9 @@ def test_search():
 def logo():
     return render_template ('logo.html')
 
+@app.route('/trading')
+def trading():
+    return render_template ('trading.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
