@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title%} Cedears{% endblock %}
+{% block title%} Guerrero Buisness {% endblock %}
 
 {% block content%}
 <div class="container">
@@ -16,31 +16,43 @@
         </thead>
          <tbody>
             <tr>
-                <td><input type= "text"class ="form-control" value="AAPL"></td>
-                <td><input type="text" class="form-control" value="$12000"></td>
-                <td><input type="text" class="form-control" value="$15000"></td>
+                <td><input type="text"class ="form-control" value="AAPL (Apple Inc)"></td>
+                <td><input type="text" class="form-control" value="$12.000"></td>
+                <td><input type="text" class="form-control" value="$15.000"></td>
             </tr>
             <tr>
-                <td><input type="text" class="form-control" value="ABC"></td>
-                <td><input type="text" class="form-control" value="$2500,75"></td>
-                <td><input type="text" class="form-control" value="$2850"></td>
+                <td><input type="text" class="form-control" value="ABC (Índice ABC)"></td>
+                <td><input type="text" class="form-control" value="$2.500,75"></td>
+                <td><input type="text" class="form-control" value="$2.850"></td>
             </tr>
             <tr>
-                <td><input type="text" class="form-control" value="TSLA"></td>
-                <td><input type="text" class="form-control" value="$5700"></td>
-                <td><input type="text" class="form-control" value="$6000"></td>
+                <td><input type="text" class="form-control" value="TSLA (Tesla Motors)"></td>
+                <td><input type="text" class="form-control" value="$5.700"></td>
+                <td><input type="text" class="form-control" value="$6.000"></td>
             </tr>
             <tr>
-                <td><input type="text" class="form-control" value="XYZ"></td>
+                <td><input type="text" class="form-control" value="XYZ (Acción XYZ)"></td>
                 <td><input type="text" class="form-control" value="$100,25"></td>
                 <td><input type="text" class="form-control" value="$250"></td>
             </tr>     
          </tbody>
     </table>
 </div>
+
 <style>
     #spreadsheet tr {
-        color: white;
+        color: #fff;
+    }
+
+    input.form-control {
+        background-color: transparent; 
+        color: #fff; 
+        border: 1px solid #ccc; 
+    }
+
+    input.form-control:focus {
+        outline: none;
+        border-color: #ffd700; 
     }
 </style>
 
