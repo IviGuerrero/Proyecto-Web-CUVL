@@ -21,3 +21,8 @@ body {
     margin-top: 80px;
     padding-left: 80px;
 }
+
+.trading-widget {
+    margin: 20px;
+    text-align: center;
+}
