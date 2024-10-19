@@ -75,9 +75,10 @@ def test_search():
 def logo():
     return render_template ('logo.html')
 
-@app.route('/trading')
+@app.route('/trading', methods=['GET'])
 def trading():
-    return render_template ('trading.html')
+    symbol = request.args.get('symbol', 'NASDAQ:AAPL')  
+    return render_template('trading.html', symbol=symbol)
 
 if __name__ == '__main__':
     app.run(debug=True)
