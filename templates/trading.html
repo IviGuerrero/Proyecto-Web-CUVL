@@ -1,60 +1,29 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
-<div class="trading-widget">
-    <h2>Gráfico de Cedears:</h2>
-    
-    <form method="GET">
-        <label for="company">Seleccione una empresa:</label>
-        <select id="company" name="symbol">
-            <option value="NASDAQ:AAPL">Apple Inc.</option>
-            <option value="NASDAQ:TSLA">Tesla Motors</option>
-            <option value="NYSE:XYZ">Empresa XYZ</option>
-            <option value="NYSE:ABC">Índice ABC</option>
-        </select>
-        <button type="submit">Ver gráfico</button>
-    </form>
 
-    <div class="tradingview-widget-container">
-        <div id="tradingview_chart"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-        <script type="text/javascript">
-        new TradingView.widget(
-        {
-            "width": 980,
-            "height": 610,
-            "symbol": "{{ symbol }}",  
-            "interval": "D",
-            "timezone": "Etc/UTC",
-            "theme": "light",
-            "style": "1",
-            "locale": "es",
-            "toolbar_bg": "#f1f3f6",
-            "enable_publishing": false,
-            "allow_symbol_change": true,
-            "container_id": "tradingview_chart"
-        });
-        </script>
+<div class="background-image">
+    <div class="jumbotron">
+        <h1 class="display-4">Que es TradingView?</h1>
+        <p class="lead">Es una red social, una plataforma de análisis y una aplicación móvil para traders e inversores.
+             La empresa se fundó en 2011 y tiene oficinas en Nueva York y Londres. 
+             En 2020, la empresa se encuentra entre los 130 mejores sitios web a nivel mundial según Alexa .
+             Fue fundada en 2011 por Konstantin Ivanov (CTO), Denis Globa (CEO) y Stan Bokov (COO). 
+             TradingView tiene su sede en Nueva York y su sede del mercado europeo en Londres .
+             La plataforma ayuda a los usuarios de todo el mundo a comprender mejor los mercados financieros al discutir ideas de inversión en un foro abierto .
+             En el verano de 2013, el proyecto fue seleccionado para el acelerador de startups Techstars , donde firmó contratos con Microsoft y CME .
+             La empresa recibió más tarde 3,6 millones de dólares en financiación de iTech Capital y otros inversores (TechStars, Right Side Capital Management, Irish Angels). 
+             En mayo de 2018, la empresa cerró otra ronda de inversión de riesgo por 37 millones de dólares liderada por
+             Insight Venture Partners , DRW Venture Capital y Jump Capital, adquiriendo TradeIT.
+             En octubre de 2021, como parte de la siguiente ronda de financiación, TradingView fue valorada en 3.000 millones de dólares y atrajo 298 millones de dólares adicionales de inversores, incluido Tiger Global Management . 
+        </p>
+        <hr class="my-4">
+        <div class="embed-responsive embed-responsive-16by9">
+            <p class="lead">Les vamos a dejar un video introductorio sobre de que se trata TradingView:</p>
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KXruNXsVUFQ" allowfullscreen></iframe>
+        </div>
+
     </div>
+
 </div>
-
-<style>
-    #company, button {
-        background-color: transparent; 
-        color: white; 
-        border: 1px solid white; 
-        padding: 5px;
-        margin: 10px 0;
-    }
-
-    #company option {
-        background-color: black; 
-        color: white; 
-    }
-
-    button {
-        cursor: pointer;
-    }
-</style>
-
 {% endblock %}
