@@ -75,5 +75,9 @@ def logo():
 def trading():  
     return render_template('trading.html')
 
+@app.route('/'grafico)
+def grafico():
+    return render_template('grafico.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
