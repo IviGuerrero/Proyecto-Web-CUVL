@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Financial Data
+Guerrero Buisness
 {% endblock %}
 
 {% block content %}
   <h1>Datos Financieros</h1>
-  <p>Información combinada de Balanz e Investing Pro:</p>
+  <p>Información sobre los precios de los cedears:</p>
 
-  <h2>Balanz</h2>
+  <h2>Apple Inc:</h2>
   <p>Nombre: {{ balanz.name }}</p>
   <p>Precio: {{ balanz.price }}</p>
   <p>Cambio: {{ balanz.change }}</p>
 
-  <h2>Investing Pro</h2>
+  <h2>Tesla Motors:</h2>
   <p>Nombre: {{ investing.name }}</p>
   <p>Precio: {{ investing.price }}</p>
   <p>Cambio: {{ investing.change }}</p>
