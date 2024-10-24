@@ -63,10 +63,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('financial_data') }}">Financial Data</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url_for('trading')}}">Grafico</a>
-
-                    </li>
                 </ul>
 
                 <form class="d-flex ms-auto" action="{{ url_for('search') }}" method="GET">
@@ -105,6 +101,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{{url_for('investing')}}">Investing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('trading')}}">TradingView</a>
                     </li>
                 </ul>
             </div>
