@@ -22,15 +22,15 @@ def iol():
 @app.route('/financial-data')
 def financial_data():
     balanz_data = {
-        'name': 'XYZ',
-        'price': 100.25,
-        'change': '+1.25%'
+        'name': 'AAPL',
+        'price': 12000,
+        'change': '+ 12,5%'
     }
    
     investing_pro_data = {
-        'name': 'ABC',
-        'price': 2500.75,
-        'change': '-0.50%'
+        'name': 'TSLA',
+        'price': 5700,
+        'change': '-25%'
     }
     
     return render_template('financial_data.html',balanz=balanz_data, investing=investing_pro_data)
@@ -52,12 +52,8 @@ def search_investments(cedears):
     data = {
         'AAPL': 'Apple Inc.',
         'TSLA': 'Tesla Motors',
-        'XYZ': 'Acción XYZ',
-        'ABC': 'Índice ABC'
     }
-
     results = {key: value for key, value in data.items() if cedears in value.lower()}
-
     return results
 
 @app.route('/test')
@@ -65,7 +61,7 @@ def test():
     return "Ruta de prueba funciona correctamente"
 
 def test_search():
-    cedears_list = ['apple', 'tesla', 'xyz', 'abc', 'nonexistent']
+    cedears_list = ['apple', 'tesla', 'nonexistent']
     for cedears in cedears_list:
         print(f"Testing cedears: {cedears}")
         results = search_investments(cedears)
@@ -76,9 +72,8 @@ def logo():
     return render_template ('logo.html')
 
 @app.route('/trading', methods=['GET'])
-def trading():
-    symbol = request.args.get('symbol', 'NASDAQ:AAPL')  
-    return render_template('trading.html', symbol=symbol)
+def trading():  
+    return render_template('trading.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
