@@ -19,21 +19,9 @@ def balanz():
 def iol():
     return render_template('iol.html')
 
-@app.route('/financial-data')
-def financial_data():
-    balanz_data = {
-        'name': 'AAPL',
-        'price': 12000,
-        'change': '+ 12,5%'
-    }
-   
-    investing_pro_data = {
-        'name': 'TSLA',
-        'price': 5700,
-        'change': '-25%'
-    }
-    
-    return render_template('financial_data.html',balanz=balanz_data, investing=investing_pro_data)
+@app.route('/analisis')
+def analisis():
+    return render_template('analisis.html')
 
 @app.route('/search', methods=['GET'])
 def search():
@@ -75,7 +63,7 @@ def logo():
 def trading():  
     return render_template('trading.html')
 
-@app.route('/'grafico)
+@app.route('/grafico')
 def grafico():
     return render_template('grafico.html')
 
