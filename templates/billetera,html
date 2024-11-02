@@ -11,7 +11,7 @@
                 <th>Nombre</th>
                 <th>Acción</th>
                 <th>Cantidad</th>
-                <th>Precio Unitario (USD)</th>
+                <th>Precio Unitario ($)</th>
                 <th>Valor Total</th>
             </tr>
         </thead>
@@ -27,6 +27,6 @@
             {% endfor %}
         </tbody>
     </table>
-    <p class="text-end"><strong>Valor total de la billetera:</strong> USD {{ total_value }}</p>
+    <p class="text-end"><strong>Valor total de la billetera:</strong> $ {{ total_value }}</p>
 </div>
 {% endblock %}
