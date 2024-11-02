@@ -69,7 +69,7 @@ def grafico():
 
 wallet_data = {
     'AAPL': {'nombre': 'Apple Inc.', 'cantidad': 10, 'precio': 18500},
-    'TSLA': {'nombre': 'Tesla Motors.', 'cantidad': 5, 'precio': 16700}
+    'TSLA': {'nombre': 'Tesla Motors.', 'cantidad': 5, 'precio': 16600}
 }
 @app.route('/wallet')
 def wallet():
