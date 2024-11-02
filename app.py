@@ -2,12 +2,12 @@ import os
 from flask import Flask, render_template,request
 app= Flask (__name__,template_folder=os.path.join(os.path.dirname(__file__),'templates'))
 
-@app.route ('/')
+@app.route('/')
 def home():
     print (f"Template folder: {app.template_folder}")
     return render_template ('home.html')
 
-@app.route ('/investing')
+@app.route('/investing')
 def investing():
     return render_template('investing.html')
 
@@ -66,6 +66,15 @@ def trading():
 @app.route('/grafico')
 def grafico():
     return render_template('grafico.html')
+
+wallet_data = {
+    'AAPL': {'nombre': 'Apple Inc.', 'cantidad': 10, 'precio': 18500},
+    'TSLA': {'nombre': 'Tesla Motors.', 'cantidad': 5, 'precio': 16700}
+}
+@app.route('/wallet')
+def wallet():
+    total_value = sum(item['cantidad'] * item['precio'] for item in wallet_data.values())
+    return render_template('billetera.html', wallet_data=wallet_data, total_value=total_value)
 
 if __name__ == '__main__':
     app.run(debug=True)
