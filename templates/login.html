@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %} Guerrero Business{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Iniciar Sesion:</h2>
+    <form method="POST" action="{{url_for('login')}}" class="mt-4 mx-auto" style="max-width:400px;">
+        <div class="mb-3">
+            <label for="username" class="form-label">Nombre de Usuario</label>
+            <input type="text" class="form-control" id="password" name="password" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="text" class="form-control" id="password" name="password" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Iniciar Sesion</button>
+    </form>
+    <p class="text-center mt-3">
+        ¿No tenes una cuenta? <a href="{{url_for('register')}}">Registrate</a>
+    </p>
+
+</div>
+{% endblock %}
