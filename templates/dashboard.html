@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} Guerrero Business {% endblock %}
+
+{% block content %}
+<section>
+    <h1>Bienvenidos, {{username}}!</h1>
+    <p>Aqui puedes ver un resumen de tu cuenta y actividades.</p>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Resumen de Billetera:</h5>
+                    <p class="card-text">Saldo Disponible: $40.000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Ultimas transacciones:</h5>
+                <ul>
+                    <li>Compra de AAPL en $18.500</li>
+                    <li>Compra de TSLA en $16.500</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
