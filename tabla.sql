@@ -3,3 +3,6 @@ CREATE TABLE users(
     username TEXT UNIQUE NOT NULL,
     password TEXT NOT NULL
 );
+
+.tables
+SELECT * FROM users;
