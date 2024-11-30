@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+% extends 'base.html' %}
 
 {% block title %}
     Guerrero Business
@@ -10,14 +10,14 @@
     
     <div class="row">
         <div class="col-md-6">
-            <h4 class="text-center" style="color: white;">AAPL:</h4>
+            <h4 class="text-center" style="color: white;">Apple Inc:</h4>
             <div id="aapl-chart" style="height: 400px;">
                 <canvas id="aaplCanvas"></canvas>
             </div>
         </div>
 
         <div class="col-md-6">
-            <h4 class="text-center" style="color: white;">TSLA:</h4>
+            <h4 class="text-center" style="color: white;">Tesla Motors:</h4>
             <div id="tsla-chart" style="height: 400px;">
                 <canvas id="tslaCanvas"></canvas>
             </div>
@@ -35,10 +35,10 @@
     var aaplChart = new Chart(ctxAAPL, {
         type: 'line',
         data: {
-            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre','Noviembre'],
+            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre','Noviembre','Diciembre'],
             datasets: [{
                 label: 'AAPL',
-                data: [15000, 14000, 16000, 15500, 17000, 16500, 18000, 17500, 19000, 18500], 
+                data: [15000, 14000, 16000, 15500, 17000, 16500, 18000, 17500, 19000, 18500, 19000, 18600], 
                 borderColor: gradientAAPL,
                 pointBackgroundColor: 'white', 
                 pointBorderColor: 'white', 
@@ -78,10 +78,10 @@
     var tslaChart = new Chart(ctxTSLA, {
         type: 'line',
         data: {
-            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre','Noviembre'],
+            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre','Noviembre','Dicimebre'],
             datasets: [{
                 label: 'TSLA',
-                data: [16000, 15900, 16200, 16100, 16400, 16300, 16600, 16500, 16800, 16700], 
+                data: [16000, 15900, 16200, 16100, 16400, 16300, 16600, 16500, 16800, 16700, 16600, 16500 ], 
                 borderColor: gradientTSLA,
                 pointBackgroundColor: 'white', 
                 pointBorderColor: 'white', 
