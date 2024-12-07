@@ -59,10 +59,6 @@ def test_search():
         results = search_investments(cedears)
         print(f"Results: {results}")
 
-@app.route('/logo')
-def logo():
-    return render_template('logo.html')
-
 @app.route('/trading', methods=['GET'])
 def trading():
     return render_template('trading.html')
