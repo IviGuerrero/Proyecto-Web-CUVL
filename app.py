@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, request, redirect, url_for, flash
-from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
+from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required
 import sqlite3
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -27,6 +27,7 @@ def iol():
 def analisis():
     return render_template('analisis.html')
 
+
 @app.route('/search', methods=['GET'])
 def search():
     cedears = request.args.get('cedears')
@@ -48,16 +49,6 @@ def search_investments(cedears):
     results = {key: value for key, value in data.items() if cedears in value.lower()}
     return results
 
-@app.route('/test')
-def test():
-    return "Ruta de prueba funciona correctamente"
-
-def test_search():
-    cedears_list = ['apple', 'tesla', 'nonexistent']
-    for cedears in cedears_list:
-        print(f"Testing cedears: {cedears}")
-        results = search_investments(cedears)
-        print(f"Results: {results}")
 
 @app.route('/trading', methods=['GET'])
 def trading():
@@ -136,11 +127,6 @@ def register():
             conn.close()
     return render_template('register.html')
 
-@app.route('/dashboard')
-@login_required
-def dashboard():
-    return render_template('dashboard.html',username=current_user.username)
-
 @app.route('/logout')
 @login_required
 def logout():
@@ -148,10 +134,11 @@ def logout():
     flash('Sesión cerrada exitosamente', 'info')
     return redirect(url_for('login'))
 
+
 def init_db():
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
-    cursor.execute('''
+    cursor.execute(''' 
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             username TEXT UNIQUE NOT NULL,
@@ -161,6 +148,10 @@ def init_db():
     conn.commit()
     conn.close()
     print("Base de datos inicializada correctamente")
+
+@app.route('/dashboard')  
+def dashboard():
+    return render_template('dashboard.html')  
 
 if __name__ == '__main__':
     init_db()
